@@ -1,4 +1,4 @@
-## Laravel PHP Framework
+## Quick implementation of Twitter's Stream API - Aggregations - MapReduce with laravel and MongoDB
 
 all this stuff was made in 4 hours, the code is not clean, 
 
