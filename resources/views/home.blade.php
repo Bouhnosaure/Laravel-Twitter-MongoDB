@@ -48,5 +48,14 @@
         });
         @endforeach
 
+        $("#myChart").click(
+                function(evt){
+                    var activePoints = myPieChart.getSegmentsAtEvent(evt);
+                    var url = "https://twitter.com/hashtag/" + activePoints[0].label;
+                    var win = window.open(url, '_blank');
+                    win.focus();
+                }
+        );
+
     </script>
 @endsection
