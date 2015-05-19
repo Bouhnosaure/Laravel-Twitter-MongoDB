@@ -136,7 +136,7 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
         'Jenssegers\Mongodb\MongodbServiceProvider',
-
+        'EllipseSynergie\ApiResponse\Laravel\ResponseServiceProvider',
 		/*
 		 * Application Service Providers...
 		 */

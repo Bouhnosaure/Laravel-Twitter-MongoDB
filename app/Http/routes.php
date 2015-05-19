@@ -14,6 +14,17 @@
 Route::get('/', 'MongoController@index');
 Route::get('keywords', 'MongoController@keywords');
 
-Route::get('stream', 'MongoController@stream');
-Route::get('mapreduce', 'MongoController@mapreduce');
+Route::group(['prefix' => 'exec'], function () {
+    Route::get('stream', 'MongoController@stream');
+    Route::get('mapreduce', 'MongoController@mapreduce');
+});
+
+
+Route::group(['prefix' => 'api'], function () {
+    Route::get('twitter/total', 'ApiController@twitterTotal');
+    Route::get('twitter/keywords', 'ApiController@keywords');
+
+    Route::get('hashtag/total', 'ApiController@hashtagTotal');
+    Route::get('hashtag/aggregate', 'ApiController@aggregateHashtag');
+});
 
