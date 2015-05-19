@@ -8,8 +8,13 @@ all code is not commented, just look the routes :
 
 -  ```'/'``` is simili dashboard 
 - ```'/keywords'``` is for looking keyword after a map reduce
-- ```'/stream'``` is for collecting data from Stream API of twitter ( it's quick ~2800 tweets / 10 sec)
-- ```'/mapreduce'``` it's for mapreduce all keywords in all tweets
+- ```'/exec/stream'``` is for collecting data from Stream API of twitter ( it's quick ~2800 tweets / 10 sec)
+- ```'/exec/mapreduce'``` it's for mapreduce all keywords in all tweets
+
+- ```'/api/twitter/total'``` total of tweets in db
+- ```'/api/hashtag/total'``` total of hashtags in db
+- ```'/api/hashtag/aggregate'``` return collection of 20 most popular hashtag
+- ```'/api/twitter/keywords/'``` return paginated list of keywords found in all tweets by mapreduce
 
 so i put my logic in services classes.
 
