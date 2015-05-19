@@ -89,7 +89,7 @@ return [
             'port'     => 27017,
             'username' => '',
             'password' => '',
-            'database' => 'database',
+            'database' => env('mongo_database'),
         ),
 
 	],

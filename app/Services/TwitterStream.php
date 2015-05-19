@@ -22,7 +22,7 @@ class TwitterStream
         $twitter = $this->getTwitAuth();
         $twitter->streaming(
             'statuses/filter',
-            array('track' => 'my,your,her,his,our,their,the,mine,yours,his,hers,ours,theirs,this,these,that,those,and,i,a,to,you,it,for,on,be,so,are,not,of,in,out,from,all'),
+            array('track' => env('twitter_tracked_words')),
             function ($twitter, $status) {
                 $this->send_to_queue($status);
                 return true;

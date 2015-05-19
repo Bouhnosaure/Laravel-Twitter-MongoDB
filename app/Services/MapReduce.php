@@ -24,7 +24,7 @@ class MapReduce
     public function __construct()
     {
         $mongo = new MongoClient();
-        $this->db = $mongo->selectDB('database');
+        $this->db = $mongo->selectDB(env('mongo_database'));
     }
 
     /**
